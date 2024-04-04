@@ -35,16 +35,29 @@ var dot3 = document.getElementById("dot3");
 var current_step = document.getElementById("current_step");
 
 
-function theStep1(){
-    step1.style.display = "none";
-    step2.style.display = "flex";
+function validateEmail(email) {
+    // Expression régulière pour valider une adresse e-mail
+    var regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return regex.test(email);
+}
 
+function theStep1(){
     userName = inputName.value;
     userEmail = inputEmail.value;
     console.log("Here is my name : " + userName + "\nHere is my Email : " + userEmail);
 
     dot2.classList.add("done");
     current_step.innerText = 2;
+
+    // Check if the email is valid
+    if (validateEmail(userEmail)) {
+        console.log("Adresse e-mail valide !");
+        step1.style.display = "none";
+        step2.style.display = "flex";
+    } else {
+        console.log("Adresse e-mail invalide !");
+        alert("⚠️ Please, insert a valid email. Indeed :" +userEmail+" is not valid!");
+    }
 }
 
 function theStep2(){
