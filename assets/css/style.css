@@ -131,7 +131,7 @@ input#email::placeholder{
 .content-dots {
     display: flex;
     flex-direction: row;
-    gap: 5px;
+    gap: 8px;
 }
 
 .dot {
