@@ -49,6 +49,13 @@ function theStep1(){
     dot2.classList.add("done");
     current_step.innerText = 2;
 
+    // Vérifier si le champ "name" est vide ou égal à null
+    if (!userName.trim()) {
+        // Afficher un message d'alerte si le champ "name" est vide
+        alert("⚠️ Please, insert your name.");
+        return; // Sortir de la fonction pour arrêter le traitement
+    }
+
     // Check if the email is valid
     if (validateEmail(userEmail)) {
         console.log("Adresse e-mail valide !");
