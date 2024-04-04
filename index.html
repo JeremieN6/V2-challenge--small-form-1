@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container-page">
+        <div class="content-page">
+            <div class="container-form">
+                <div class="content-form step-1" id="step1">
+                    <div class="container-title-form">
+                        <div class="title-form">Register</div>
+                    </div>
+                    <div class="container-inputs">
+                        <div class="content-input-name">
+                            <label for="name" class="content-label">Name</label>
+                            <input type="text" name="name" id="name">
+                        </div>
+                        <div class="content-input-email">
+                            <label for="email" class="content-label">Email</label>
+                            <input type="email" placeholder="example@gmail.com" name="email" id="email">
+                        </div>
+                    </div>
+                    <div class="container-submit">
+                        <div class="submit" id="tostep2" onclick="theStep1()">Continue</div>
+                    </div>
+                </div>
+                <div class="content-form step-2" id="step2">
+                    <div class="container-title-form">
+                        <div class="title-form">Which topics are you interested in ?</div>
+                    </div>
+                    <div class="container-options">
+                        <label class="content-option" for="software-developement">
+                            <input type="checkbox" value="software-developement" id="software-developement">Software Developement
+                        </label>
+                        <label class="content-option" for="user-experience">
+                            <input type="checkbox" value="user-experience" id="user-experience">User Experience
+                        </label>
+                        <label class="content-option" for="graphic-design">
+                            <input type="checkbox" value="graphic-design" id="graphic-design">Graphic Deign
+                        </label>
+                    </div>
+                    <div class="container-submit">
+                        <div class="submit" id="tostep3"  onclick="theStep2()">Continue</div>
+                    </div>
+                </div>
+                <div class="content-form step-3" id="step3">
+                    <div class="container-title-form">
+                        <div class="title-form">Summary</div>
+                    </div>
+                    <div class="container-summary-row-1">
+                        <div>
+                            <span class="label-summary-profil">Name: 
+                                <p class="label-summary-profil-value" id="label-summary-profil-value-name">
+                                    
+                                </p>
+                            </span>
+                            <span class="label-summary-profil">Email: 
+                                <p class="label-summary-profil-value" id="label-summary-profil-value-email">
+                                    
+                                </p>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="container-summary-row-2">
+                        <span class="label-summary-topics">
+                            Topics :
+                        </span>
+                        <ul id="userTopics">
+                        </ul>
+                    </div>
+                    <div class="container-submit">
+                        <div class="submit" id="submit" onclick="submit()">Confirm</div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-steps">
+                <div class="container-step">
+                    <div class="content-step">
+                        <p>Step <span id="current_step">1</span> of 3</p>
+                    </div>
+                </div>
+                <div class="content-dots">
+                    <div class="dot done" id="dot1"></div>
+                    <div class="dot" id="dot2"></div>
+                    <div class="dot" id="dot3"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./assets/js/script.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</body>
+</html>

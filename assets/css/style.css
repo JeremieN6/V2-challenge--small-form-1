@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+:root{
+
+    font-family: "Inter", sans-serif;
+    --text-heading: 1.25rem;
+    --text-tab: 0.875rem;
+    --text-body: 1rem;
+    --text-small-label: 0.75rem;
+
+    --btn-color: "#652CD1";
+    --btn-color-hover: "#845EEE";
+
+}
+
+body{
+    font-family: "Inter", sans-serif;
+    background: linear-gradient(145deg, #291E56, #131929), linear-gradient(315deg, #291E56, #131929);
+    background-repeat: no-repeat;
+    color: #FFF;
+}
+
+html, body, .container-page, .content-page {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background-color: #212936;
+    padding: 30px 40px;
+    border-radius: 15px;
+    border: 1px solid #394150;
+    width: 100%;
+}
+
+.content-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.container-inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.content-input-email, .content-input-name {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 100%;
+}
+
+input#name, input#email {
+    height: 40px;
+    border-radius: 10px;
+    background-color: transparent;
+    border: 1px solid #394150;
+    color: #FFF;
+    font-size: var(--text-small-label);
+    padding-left: 15px;
+
+}
+
+/* input#name:focus,
+input#email:focus {
+    border: 1px solid #845EEF;
+} */
+
+.content-input-name input:focus{
+    border: 1px solid #845EEF;
+}
+
+input#name::placeholder,
+input#email::placeholder{
+    color: #4D5562;
+    font-weight: 500;
+    color: #4D5562;
+    font-size: var(--text-small-label);
+
+}
+.content-label {
+    font-size: var(--text-small-label);
+    font-weight: 600;
+    color: #A1A1A9;
+}
+.container-submit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.container-step {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: var(--text-small-label);
+    color: #4D5562;
+    font-weight: 600;
+}
+
+.submit {
+    background: linear-gradient(to bottom, #845EEE, #652CD1);
+    padding: 10px;
+    border-radius: 20px;
+    width: 30%;
+    font-size: var(--text-small-label);
+    cursor: pointer;
+}
+.container-steps {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+.content-dots {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    background-color: #FFF;
+    border-radius: 10px;
+    border: 0;
+}
+
+.done{
+    background-color: #652CD1;
+    box-shadow: 0px 0px 5px 1px #845EEE;
+}
+
+.container-summary-row-1 div {
+    display: flex;
+    flex-direction: column;
+}
+
+.label-summary-profil,
+.label-summary-topics{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: #A1A1A9;
+    font-size: var(--text-tab);
+}
+
+.label-summary-profil-value{
+    color: #FFF;
+    margin: 5px 0;
+}
+
+#step2, #step3{
+    display: none;
+}
+
+.container-options {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+}
+
+.content-option {
+    /* width: 100%; */
+    background: #4D5562;
+    border: 1px solid #A1A1A9;
+    padding: 15px;
+    border-radius: 10px;
+    color: #A1A1A9;
+    font-size: var(--text-tab);
+    font-weight: 500;
+    cursor: pointer;
+}
+
+input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+    /* Autres styles pour masquer la checkbox selon vos besoins */
+}
+
+@media screen and (max-width: 550px){
+    .container-form {
+        width: 75%;
+    }
+}
